@@ -172,7 +172,7 @@ section:last-child {
 }
 
 @media all and (min-width: 602px) and (max-width: 800px) {
-	#headshot, #languages {
+	#headshot {
 		display: none;
 	}
 	
@@ -190,7 +190,7 @@ section:last-child {
 		min-width: 280px;
 	}
 	
-	#headshot, #languages {
+	#headshot {
 		display: none;
 	}
 	
@@ -368,3 +368,29 @@ section:last-child {
 	-moz-animation-delay: 0, 2.5s;
 	animation-delay: 0, 2.5s;
 }
+
+@media print{
+	#languages{
+		display: none;
+	}
+
+	p {
+		font-size: 0.9em;
+		line-height: 1.2em;
+		margin-bottom: 12px;
+	}
+
+	.sectionContent ul li {
+		line-height: 1.2;
+	}
+
+	.sectionTitle h1 {
+		font-size: 1.2em;
+	}
+
+	section {
+		padding: 16px 0 0;
+	}
+}
+
+.pagebreak { page-break-before: always; } /* page-break-after works, as well */
